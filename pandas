@@ -1,0 +1,4 @@
+import pandas as pd
+
+#加载csv文件
+df = pd.read_csv('filename.csv')
