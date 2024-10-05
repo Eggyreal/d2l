@@ -21,12 +21,19 @@ min_value = np.min(arr)
 max_value = np.max(arr) 
 # 计算每个元素的平方根
 sqrt_array = np.sqrt(arr)  
-
+#矩阵元素相乘
+array1 * array2
+np.multiply(array1, array2)
+#矩阵相乘
+np.dot()  #只能二维用
+np.matmul()
+np.mm()
+array1 @ array2
+# 计算矩阵的逆
+inverse_matrix = np.linalg.inv(matrix)  
 
 any_true = np.any(arr > 1)  # 检查是否存在大于1的元素
 all_true = np.all(arr > 0)  # 检查所有元素是否大于0
 
-#矩阵内积
-y = np.dot(w,x)
-inverse_matrix = np.linalg.inv(matrix)  # 计算矩阵的逆
+
 
