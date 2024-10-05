@@ -1,1 +1,13 @@
+import torch
 
+#create the tensor
+tensor1 = torch.tensor([1,2,3,4])
+tensor2 = torch.arange(12)
+tensor_reshape = tensor.reshape(1,3,4)  #3 dimentions
+
+#基础运算
+torch.sum(axis=0)
+torch.sum(axis=1)
+torch.mean()
+#梯度grad
+tensor_needgrad = torch.arange(12,requires_grad = True)
