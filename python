@@ -1,1 +1,2 @@
-
+#assert (to judge the code behind is true or not. if true, continue
+assert i == 0
