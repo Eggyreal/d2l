@@ -11,6 +11,6 @@ x = torch.randn(12)  #随机数
 torch.sum(axis=0)
 torch.mean()
 torch.randn()    #根据正态分布生成随机tensor
-
+torch.uniform_(a, b)  #根据均匀分布生成随机tensor
 
 nn.paramenter()  #将一个张量包裹在 nn.Parameter 中，可以让这个张量被视为模型的参数，从而在模型优化过程中自动计算其梯度。
