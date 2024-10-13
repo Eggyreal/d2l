@@ -1,2 +1,5 @@
 #assert (to judge the code behind is true or not. if true, continue
 assert i == 0
+
+#lamba创建一个简单匿名函数
+lamba x, y, z: x**2+3*y-sqrt(z)
