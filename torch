@@ -14,3 +14,12 @@ torch.randn()    #根据正态分布生成随机tensor
 torch.uniform_(a, b)  #根据均匀分布生成随机tensor
 
 nn.paramenter()  #将一个张量包裹在 nn.Parameter 中，可以让这个张量被视为模型的参数，从而在模型优化过程中自动计算其梯度。
+
+#对张量进行裁剪，设置最大值、最小值
+torch.clamp(input, min=None, max=None, out=None)
+clipped_preds = torch.clamp(net(features), 1, 2，float('inf'))    #float('inf')代表没有最大值
+
+tensor1.item()  #将单元素张量转化为python标量
+
+
+
