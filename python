@@ -3,3 +3,6 @@ assert i == 0
 
 #lamba创建一个简单匿名函数
 lamba x, y, z: x**2+3*y-sqrt(z)
+
+#slice 切片
+slice(start, stop, step)
