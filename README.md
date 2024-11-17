@@ -1,6 +1,6 @@
 ## d2l
-write some basic functions for reciting
-which will including basic usage of python functions
-numpy
-torch
-and so on 
+> write some basic functions for reciting
+>which will including basic usage of python functions
+1. numpy
+2. torch
+3. and so on 
