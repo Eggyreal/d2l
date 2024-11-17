@@ -1,4 +1,4 @@
-#using torch to calculate the grad
+# using torch to calculate the grad
 import torch 
 x = torch.ones(2,2,requires_grad = True)  #crate a tensor, the requirement of grad is passed
 
