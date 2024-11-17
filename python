@@ -21,3 +21,6 @@ def say_hello():
 
 say_hello()
 
+
+#with打开文件
+
