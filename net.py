@@ -2,7 +2,7 @@ import torch
 
 class net(nn.Module):
     def __init__(self):
-        super(CustomModel, self).__init__()
+        super(net, self).__init__()
         self.fc1 = nn.Linear(10, 20)
         self.relu = nn.ReLU()
         self.fc2 = nn.Linear(20, 1)
