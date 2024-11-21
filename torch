@@ -21,5 +21,11 @@ clipped_preds = torch.clamp(net(features), 1, 2，float('inf'))    #float('inf')
 
 tensor1.item()  #将单元素张量转化为python标量
 
-
-
+#构造简单的顺序网络nn.sequential()，例子如下
+#简单的线性
+model = nn.Sequential(
+    nn.Linear(10, 20),  # 输入10维，输出20维
+    nn.ReLU(),          # 激活函数
+    nn.Linear(20, 1)    # 输入20维，输出1维
+)
+#构造自定义网络方法，看net文件
