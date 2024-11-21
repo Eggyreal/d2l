@@ -15,6 +15,7 @@ class Net(nn.Module):
         x = self.fc2(x)
         return x
 net = Net(X)
+
 #顺序块，李沐傻逼写着炫技的，还不如像上面老老实实地写
 #因为当你要用这种网络层的时候，肯定是因为有时候要复用一些层，如果还是这样子顺序的下来，为什么不直接用nn.Sequntial()还方便
 class MySequential(nn.Module):
