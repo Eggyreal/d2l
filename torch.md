@@ -11,7 +11,7 @@ import torch
 创建tensor
 
 ```python
-tensor1 = torch.tensor([1,2,3,4])
+tensor1 = torch.tensor([1,2,3,4], dtype=torch.float)
 tensor2 = torch.arange(12)
 tensor_reshape = tensor.reshape(1,3,4)  #3 dimentions
 tensor1 = tensor1.reshape(-1, 2)  #-1可以做占位符
