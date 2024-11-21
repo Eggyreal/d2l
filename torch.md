@@ -15,7 +15,8 @@ tensor1 = torch.tensor([1,2,3,4], dtype=torch.float)
 tensor2 = torch.arange(12)
 tensor_reshape = tensor.reshape(1,3,4)  #3 dimentions
 tensor1 = tensor1.reshape(-1, 2)  #-1可以做占位符
-x = torch.randn(12)  #随机数
+x = torch.randn(12)  #正态分布的随机数
+x = toorch.rand(12)  #均匀分布的随机数
 ```
 
 转换
