@@ -63,3 +63,9 @@ print(net[2].bias.data) #把偏置变成一个tensor
 print(*[(name,param.shape) for name, param in net[0].named_parameters()])
 net.named_parameters()   #获取所有参数，保存在生成器（一个形式为（name，parameters）的元组）
 ```
+### 常见torch.nn中的函数
+```python
+nn.init.normal_(m.weight, mean=0, std=0.01)  #正态分布来初始化权重
+nn.init.zeros_(m.bias)                       #偏置初始化为零
+# 函数后面带“_”表示原地操作
+```
