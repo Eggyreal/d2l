@@ -55,4 +55,11 @@ model = nn.Sequential(
     nn.Linear(20, 1)    # 输入20维，输出1维
 )
 ```
-
+#### 参数管理
+```python
+net[2].state_dict()     #获得net[2]的权重和偏置参数
+net[2].bias             #获得net[2]的偏置
+print(net[2].bias.data) #把偏置变成一个tensor
+print(*[(name,param.shape) for name, param in net[0].named_parameters()])
+net.named_parameters()   #获取所有参数，保存在生成器（一个形式为（name，parameters）的元组）
+```
