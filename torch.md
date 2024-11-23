@@ -63,9 +63,15 @@ print(net[2].bias.data) #把偏置变成一个tensor
 print(*[(name,param.shape) for name, param in net[0].named_parameters()])
 net.named_parameters()   #获取所有参数，保存在生成器（一个形式为（name，parameters）的元组）
 ```
-### 常见torch.nn中的函数
+### 常见torch.nn.init中的函数,网络初始化。
 ```python
 nn.init.normal_(m.weight, mean=0, std=0.01)  #正态分布来初始化权重
 nn.init.zeros_(m.bias)                       #偏置初始化为零
+nn.init.constant_(m.weight, 1)               #初始化为常数
+nn.init.xavier_uniform_                      #xavier 初始化，常见于Sigmoid 或 Tanh激活函数
 # 函数后面带“_”表示原地操作
+
+#均匀分布初始化
+torch.nn.init.uniform_(tensor, a=0.0, b=1.0) #tensor: 需要初始化的张量。a: 均匀分布的下界（默认为 0.0）。b: 均匀分布的上界（默认为 1.0）。
+
 ```
