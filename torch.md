@@ -115,7 +115,8 @@ clone = MLP()   #创建clone
 clone.load_state_dict(torch.load('mlp.params'))     #clone.load_state_dict,把字典加载到模型中
 clone.eval()            #评估模式，不求梯度
 ```
-### 卷积convolution
+### 卷积CNN convolution
+> 一种特殊的全连接层
 提取局部特征
 二维交叉相关
 1. 平移不变性
