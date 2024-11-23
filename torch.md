@@ -103,3 +103,15 @@ my_dict = {'x':x,
 torch.save(my_dict,'mydict')       #以pickle格式保存文件，后缀为.pt/.pth
 my_dict2 = torch.load('mydict')    #读取文件
 ```
+```python
+class MLP(nn.Module):
+    ...
+net = MLP()
+X = torch.randn(size=(2,20))
+Y = net(X)
+torch.save(net.state_dict(),'mlp.params') #保存所有的parameters
+
+clone = MLP()   #创建clone
+clone.load_state_dict(torch.load('mlp.params'))     #clone.load_state_dict,把字典加载到模型中
+clone.eval()            #评估模式，不求梯度
+```
