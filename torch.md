@@ -116,5 +116,11 @@ clone.load_state_dict(torch.load('mlp.params'))     #clone.load_state_dict,把�
 clone.eval()            #评估模式，不求梯度
 ```
 ### 卷积convolution
+提取局部特征
 二维交叉相关
+1. 平移不变性
+   比如说一张图片的识别，一只狗放在屏幕左上角和右下角都应该是狗，虽然他们的数据肯定不一样，但是都要识别出来是狗。
+2. 局部性
+```python
+
 ```
