@@ -67,6 +67,7 @@ print(*[(name,param.shape) for name, param in net[0].named_parameters()])
 net.named_parameters()   #获取所有参数，保存在生成器（一个形式为（name，parameters）的元组）
 ```
 ### 常见torch.nn.init中的函数,网络初始化。
+具体代码见[net.py](net.py)
 ```python
 nn.init.normal_(m.weight, mean=0, std=0.01)  #正态分布来初始化权重
 nn.init.zeros_(m.bias)                       #偏置初始化为零
