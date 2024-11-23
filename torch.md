@@ -80,3 +80,15 @@ torch.nn.init.uniform_(tensor, a=0.0, b=1.0) #tensor: 需要初始化的张量�
 shared = nn.Linear(8,8)
 net = nn.Sequential(nn.Linear(4,8), nn.ReLu(), shared, nn.ReLU(), shared)
 #此时 net[2],net[4]的权重在是一样的
+```
+自定义层, 以全连接层做例子
+```python
+class MyLinear(nn.Module):
+    def __init__(self,input_size, output_size):
+        super().__init__()
+        self.weight = nn.Parameter(torch.randn(output_size,input_size))
+        self.bias = nn.Parameter(torch.randn(output_size))
+    def forward(self,X):
+        X = torch.matmul(X,self.weight.T) + self.bias
+        return X
+```
