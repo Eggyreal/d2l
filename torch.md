@@ -92,3 +92,12 @@ class MyLinear(nn.Module):
         X = torch.matmul(X,self.weight.T) + self.bias
         return X
 ```
+#### 读写文件
+```python
+x = torch.arange(10)
+y = torch.zeros(4)
+my_dict = {'x':x,
+           'y':y}
+torch.save(my_dict,'mydict')       #以pickle格式保存文件，后缀为.pt/.pth
+my_dict2 = torch.load('mydict')    #读取文件
+```
