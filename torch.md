@@ -12,6 +12,7 @@ import torch
 
 ```python
 tensor1 = torch.tensor([1,2,3,4], dtype=torch.float)
+tensor = torch.FloatTensor([1,2,3,4])
 tensor2 = torch.arange(12)
 tensor_reshape = tensor.reshape(1,3,4)  #3 dimentions
 tensor1 = tensor1.reshape(-1, 2)  #-1可以做占位符
@@ -73,5 +74,9 @@ nn.init.xavier_uniform_                      #xavier 初始化，常见于Sigmoi
 
 #均匀分布初始化
 torch.nn.init.uniform_(tensor, a=0.0, b=1.0) #tensor: 需要初始化的张量。a: 均匀分布的下界（默认为 0.0）。b: 均匀分布的上界（默认为 1.0）。
-
 ```
+参数绑定
+```python
+shared = nn.Linear(8,8)
+net = nn.Sequential(nn.Linear(4,8), nn.ReLu(), shared, nn.ReLU(), shared)
+#此时 net[2],net[4]的权重在是一样的
