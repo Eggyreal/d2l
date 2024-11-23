@@ -116,12 +116,16 @@ clone.load_state_dict(torch.load('mlp.params'))     #clone.load_state_dict,把�
 clone.eval()            #评估模式，不求梯度
 ```
 ### 卷积CNN convolution
-> 一种特殊的全连接层
+> 一种特殊的全连接层 >
 提取局部特征
 二维交叉相关
+具体代码看convolution.py
 1. 平移不变性
    比如说一张图片的识别，一只狗放在屏幕左上角和右下角都应该是狗，虽然他们的数据肯定不一样，但是都要识别出来是狗。
 2. 局部性
 ```python
-
+conv2d = nn.conv2d = nn.Conv2d(1 , 1, kernel_size=(1,2), bias = False)  #输入通道，输出通道，卷积核形状，偏置
+#输入的张量是四维的(batch_size , in_channels, height, width)
+X = X.reshape(1,1,6,8)          #变形为单样本，单通道
+Y = Y.reshape(1,1,6,7)
 ```
