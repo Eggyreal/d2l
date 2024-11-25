@@ -131,3 +131,11 @@ conv2d = nn.conv2d = nn.Conv2d(1 , 1, kernel_size=(1,2), bias = False)  #输入�
 X = X.reshape(1,1,6,8)          #变形为单样本，单通道
 Y = Y.reshape(1,1,6,7)
 ```
+卷积超参数
+1. 填充和步幅
+```python
+conv1 = nn.Conv2d(1,1,kernel_size = 3, padding=1, stride=2)
+conv2 = nn.Conv2d(1,1,kernel_size = (5,3), padding=(2,1),stride = (3,4))
+```
+2.通道
+      
