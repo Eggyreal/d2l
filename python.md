@@ -106,5 +106,13 @@ slcie:切片，这个在分割数据集的时候还是挺有用的
 slice(start, stop, step)
 ```
 
-
-
+简写for循环：
+```python
+sum(i) for i in range(10)
+```
+### 杂七杂八
+1.把列表或元组放到一起形成一个新的迭代器,用于遍历多个可迭代对象
+```pythopn
+zip(X, Y)
+```
+2.
