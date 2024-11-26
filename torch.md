@@ -138,4 +138,7 @@ conv1 = nn.Conv2d(1,1,kernel_size = 3, padding=1, stride=2)
 conv2 = nn.Conv2d(1,1,kernel_size = (5,3), padding=(2,1),stride = (3,4))
 ```
 2.通道
-      
+每一个通道都有一个卷积核，结果是所有通道卷积结果的和
+输入X:$c_i*n_h*n_w$, 核W: $c_i*n_a*n_b$, 输出Y: $m_h*m_w$
+$Y = \sum_{i=0}^{c_i} X_i @ W_i$
+
