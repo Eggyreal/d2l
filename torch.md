@@ -139,10 +139,13 @@ conv2 = nn.Conv2d(1,1,kernel_size = (5,3), padding=(2,1),stride = (3,4))
 ```
 2.通道
 每一个通道都有一个卷积核，结果是所有通道卷积结果的和
-$X: c_{in}^{h \times w}$, 核 $W: c_{in}^{a \times b}$, 输出 $Y: m_h \times m_w$ 
-
+单个输出通道
+$X: c_{in}^{h \times w}$, 核 $W: c_{in}^{a \times b}$, 输出（单通道） $Y: m_h \times m_w$ 
 $$
 Y = \sum_{i=0}^{c_{in}} X_i @ W_i
 $$
-
-
+多输出通道
+$X: c_{in}^{h \times w}$, 核 $W: c_{in}^{a \times b}$, 输出（单通道） $Y: m_h \times m_w$ 
+$$
+Y = \sum_{i=0}^{c_{in}} X_i @ W_i
+$$
