@@ -114,5 +114,6 @@ sum(i) for i in range(10)
 1.把列表或元组放到一起形成一个新的迭代器,用于遍历多个可迭代对象
 ```pythopn
 zip(X, Y)
+for x, y in zip(X, K):
 ```
 2.
