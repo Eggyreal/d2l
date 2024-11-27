@@ -120,7 +120,7 @@ clone.eval()            #评估模式，不求梯度
 > 一种特殊的全连接层 >
 提取局部特征
 二维交叉相关
-具体代码看[convolution.py](https://github.com/Eggyreal/d2l/blob/main/convolution.py)
+具体代码看[CNN](https://github.com/Eggyreal/d2l/blob/main/CNN.md)
 
 1. 平移不变性
    比如说一张图片的识别，一只狗放在屏幕左上角和右下角都应该是狗，虽然他们的数据肯定不一样，但是都要识别出来是狗。
@@ -138,14 +138,3 @@ conv1 = nn.Conv2d(1,1,kernel_size = 3, padding=1, stride=2)
 conv2 = nn.Conv2d(1,1,kernel_size = (5,3), padding=(2,1),stride = (3,4))
 ```
 2.通道
-每一个通道都有一个卷积核，结果是所有通道卷积结果的和
-单个输出通道
-$X: c_{in}^{h \times w}$, 核 $W: c_{in}^{a \times b}$, 输出（单通道） $Y: m_h \times m_w$ 
-$$
-Y = \sum_{i=0}^{c_{in}} X_i @ W_i
-$$
-多输出通道
-$X: c_{in}^{h \times w}$, 核 $W: c_{in}^{a \times b}$, 输出（单通道） $Y: m_h \times m_w$ 
-$$
-Y = \sum_{i=0}^{c_{in}} X_i @ W_i
-$$
