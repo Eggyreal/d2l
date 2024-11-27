@@ -28,3 +28,10 @@ class MySequential(nn.Module):
             X = block(X)
         return X
 net = MySequential(nn.Linear(20,256), nn.ReLU(), nn.Linear(256,10))
+
+#网络层
+self.linear = nn.Linear(in_features, out_features, bias=True)
+self.conv = nn.Conv2d(input_channel, output_channel, kernel_size, padding)
+self.sigmoid = nn.sigmoid()
+self.relu = nn.ReLu()
+self.flatten = nn.Flatten
