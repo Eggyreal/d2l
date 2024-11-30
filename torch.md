@@ -116,6 +116,20 @@ clone = MLP()   #创建clone
 clone.load_state_dict(torch.load('mlp.params'))     #clone.load_state_dict,把字典加载到模型中
 clone.eval()            #评估模式，不求梯度
 ```
+### drop out
+常用正则化手段，防止过拟合，提升泛化能力。
+随机神经元失活
+``` python
+def dropout_layer(X,dropout):
+    assert 0 <= dropout <= 1
+    if dropout == 1:
+        return torch.zeros_like(X)
+    if dropout == 0:
+        return X
+    mask = (torch.randn(X.shape) > dropout).float()
+
+    return mask * X / (1.0 - dropout)
+```
 ### 卷积CNN convolution
 > 一种特殊的全连接层 >
 提取局部特征
