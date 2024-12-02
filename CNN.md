@@ -1,5 +1,7 @@
 ### 卷积神经网络
 
+##### （batch_size, channels, Height, Width）
+
 #### 单通道卷积
 
 ```python
