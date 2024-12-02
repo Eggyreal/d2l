@@ -91,6 +91,7 @@ class MyLinear(nn.Module):
         super().__init__()
         self.weight = nn.Parameter(torch.randn(output_size,input_size))
         self.bias = nn.Parameter(torch.randn(output_size))
+# 需要被迭代的参数用nn.Parameter初始化
     def forward(self,X):
         X = torch.matmul(X,self.weight.T) + self.bias
         return X
