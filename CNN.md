@@ -212,4 +212,6 @@ def vgg(conv_arch):
     ])
     return nn.Sequential(*conv_blocks)
 ```
+#### ResNet
+残差块：串联一个层改变函数类 
 
