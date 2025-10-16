@@ -11,6 +11,7 @@
 |.replace(old, new)|替换子串|"hello".replace("l","L") → "heLLo"|
 |.split(sep)|按分隔符拆分字符串|"a,b,c".split(",") → ['a','b','c']|
 |.join(list)|把列表元素拼成字符串|",".join(['a','b','c']) → "a,b,c"|
+|.split(' ')|把字符串按‘’分开，保存成list|'a b'.split(' ') → ['a','b']|
 
 2️⃣ list
 |方法|作用|示例|
@@ -22,6 +23,7 @@
 |.remove(x)|删除第一个值为 x 的元素|[1,2,3,2].remove(2) → [1,3,2]|
 |.sort()|原地排序|[3,1,2].sort() → [1,2,3]|
 |sorted(list)|返回排序后的新列表|sorted([3,1,2]) → [1,2,3]|
+|.reverse(list)|倒叙列表，作用和[::-1]很像，但是省内存|sorted([a,b,c]) → [c,b,a]|
 
 3️⃣ dict
 |方法|作用|示例|
@@ -151,6 +153,7 @@ zip(X, Y)
 for x, y in zip(X, K):
 ```
 2.
+
 
 
 
