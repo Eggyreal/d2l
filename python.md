@@ -138,6 +138,7 @@ slcie:切片，这个在分割数据集的时候还是挺有用的
 ```python
 slice(start, stop, step)
 ```
+切片是包含start不包含stop的哦！！！
 
 简写for循环：
 ```python
@@ -150,5 +151,6 @@ zip(X, Y)
 for x, y in zip(X, K):
 ```
 2.
+
 
 
