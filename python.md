@@ -1,5 +1,36 @@
 ## python 基础用法
 
+### str,list,dict的内置函数
+1️⃣str
+|方法|作用|示例|
+|-------|-------|-------|
+|.find(sub)|查找子串 sub 的索引，找不到返回 -1|"hello".find("e") → 1|
+|.index(sub)|查找子串 sub 的索引，找不到报错|"hello".index("e") → 1|
+|.upper()|转大写|"hello".upper() → "HELLO"|
+|.lower()|转小写	|"Hello".lower() → "hello"|
+|.replace(old, new)|替换子串|"hello".replace("l","L") → "heLLo"|
+|.split(sep)|按分隔符拆分字符串|"a,b,c".split(",") → ['a','b','c']|
+|.join(list)|把列表元素拼成字符串|",".join(['a','b','c']) → "a,b,c"|
+2️⃣ list
+|方法|作用|示例|
+|-------|-------|-------|
+|.append(x)|在末尾添加元素|[1,2].append(3) → [1,2,3]|
+|.extend(list2)|追加另一个列表|[1,2].extend([3,4]) → [1,2,3,4]|
+|.insert(i, x)|在索引i插入元素|[1,2].insert(1,9) → [1,9,2]|
+|.pop(i)|删除索引 i 元素并返回|[1,2,3].pop(1) → 2, list → [1,3]|
+|.remove(x)|删除第一个值为 x 的元素|[1,2,3,2].remove(2) → [1,3,2]|
+|.sort()|原地排序|[3,1,2].sort() → [1,2,3]|
+|sorted(list)|返回排序后的新列表|sorted([3,1,2]) → [1,2,3]|
+3️⃣ dict
+|方法|作用|示例|
+|-------|-------|-------|
+|.keys()|返回所有键|{'a':1}.keys() → dict_keys(['a'])|
+|.values()|返回所有值|{'a':1}.values() → dict_values([1])|
+|.items()|返回键值对元组|{'a':1}.items() → dict_items([('a',1)])|
+|.get(key, default)|获取 key 对应值，不存在返回默认值|{'a':1}.get('b',0) → 0|
+|.pop(key)|删除 key 并返回值|{'a':1}.pop('a') → 1|
+|.update(dict2)|用另一个字典更新当前字典|{'a':1}.update({'b':2}) → {'a':1,'b':2}|
+|len(dict)|获取字典键的数量|len({'a':1,'b':2}) → 2|
 ### 类与对象
 
 ```python
@@ -117,3 +148,4 @@ zip(X, Y)
 for x, y in zip(X, K):
 ```
 2.
+
